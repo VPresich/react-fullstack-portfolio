@@ -1,0 +1,33 @@
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 32px;
+  z-index: 10;
+}
+
+.menuButtons {
+  display: flex;
+}
+
+.orderLinkContainer {
+  display: none;
+  width: 163px;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .orderLinkContainer {
+    display: block;
+  }
+}

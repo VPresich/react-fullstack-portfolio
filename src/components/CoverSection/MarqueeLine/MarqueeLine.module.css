@@ -1,0 +1,59 @@
+.line {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  align-items: center;
+  width: 900%;
+  transform: rotate(16deg);
+}
+
+.picture {
+  display: block;
+  width: 282px;
+  height: 162px;
+}
+
+.img {
+  width: 282px;
+  height: 162px;
+  margin: 0;
+  animation-name: marquee;
+  animation-duration: 20s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-play-state: paused;
+}
+
+/* .img.play {
+  animation-play-state: running;
+} */
+
+@media screen and (min-width: 768px) {
+  .line {
+    gap: 32px;
+    height: 314px;
+  }
+
+  .picture,
+  .img {
+    width: 544px;
+    height: 314px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .line {
+    width: 400%;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(350%);
+  }
+
+  to {
+    transform: translateX(-230%);
+  }
+}

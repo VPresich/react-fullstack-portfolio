@@ -1,0 +1,39 @@
+.container {
+  padding-top: 294px;
+  padding-bottom: 64px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 12px;
+}
+
+.item {
+  font-family: "InterTight", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--main-text);
+}
+
+.orderLinkContainer {
+  width: 164px;
+  height: 45px;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}

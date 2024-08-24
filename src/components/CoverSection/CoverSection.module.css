@@ -1,0 +1,66 @@
+.section {
+  max-width: 375px;
+  height: 100vh;
+  background-image: url("../../assets/img/covers/cover-mobile@1x.webp");
+  background-color: var(--background);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.section .noPadding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.marquee {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+@media screen and (min-resolution: 192dpi) and (max-width: 375px),
+  screen and (min-resolution: 2dppx) and (max-width: 375px),
+  screen and (min-device-pixel-ratio: 2) and (max-width: 375px) {
+  .section {
+    background-image: url("../../assets/img/covers/cover-mobile@2x.webp");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    max-width: 768px;
+    background-image: url("../../assets/img/covers/cover-tablet@1x.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px),
+  screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
+  .section {
+    background-image: url("../../assets/img/covers/cover-tablet@2x.webp");
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section {
+    min-width: 1440px;
+    background-image: url("../../assets/img/covers/cover-desktop@1x.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (max-width: 1439px),
+  screen and (min-resolution: 2dppx) and (max-width: 1439px),
+  screen and (min-device-pixel-ratio: 2) and (max-width: 1439px) {
+  .section {
+    background-image: url("../../assets/img/covers/cover-desktop@2x.webp");
+  }
+}

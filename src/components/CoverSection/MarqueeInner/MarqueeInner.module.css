@@ -1,0 +1,26 @@
+.inner {
+  position: absolute;
+  left: 0;
+  top: -40px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .inner {
+    top: -120px;
+    gap: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .inner {
+    gap: 32px;
+    top: -200px;
+  }
+}

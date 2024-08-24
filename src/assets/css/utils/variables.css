@@ -1,0 +1,28 @@
+:root {
+  --background: #1c1d20;
+  --cards: #242527;
+  --arrow: #3b3b3b;
+  --button-text: #ed3b44;
+  --button-hover: #e0373f;
+  --main-text: #fafafa;
+  --success: #3cbc81;
+  --error: #e74a3b;
+
+  --red: #ed3b44;
+  --red-hover: #e0373f;
+
+  --green-hover: #8ba10e;
+  --green: #c6e327;
+
+  --blue: #265adb;
+  --blue-hover: #0041e8;
+
+  --grey: #38beaf;
+  --grey-hover: #12201f;
+
+  --pink: #e6533c;
+  --pink-hover: #c6311a;
+
+  --orange: #ff7f08;
+  --orange-hover: #d37217;
+}
