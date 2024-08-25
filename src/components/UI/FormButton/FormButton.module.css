@@ -1,0 +1,42 @@
+.btn {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background-color: var(--button-text);
+  font-family: "InterTight", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: var(--main-text);
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover {
+  background-color: var(--button-hover);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.btn:disabled:hover {
+  background-color: var(--cards);
+}
+
+@media screen and (min-width: 768px) {
+  .button {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+}

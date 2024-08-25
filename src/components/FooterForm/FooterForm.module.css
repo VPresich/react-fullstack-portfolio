@@ -1,9 +1,9 @@
-.section {
+.footer-section {
   padding-top: 96px;
   padding-bottom: 32px;
 }
 
-.container {
+.footer-container {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -253,12 +253,12 @@
 }
 
 @media screen and (min-width: 768px) {
-  .section {
+  .footer-section {
     padding-top: 176px;
     padding-bottom: 169px;
   }
 
-  .container {
+  .footer-container {
     /* background-image: url('/img/footer/bgr-tablet@1x.webp'); */
     background-image: url("/img/covers/cover-tablet@1x.webp");
     background-repeat: no-repeat;
@@ -332,17 +332,17 @@
 @media screen and (min-resolution: 192dpi) and (min-width: 768px),
   screen and (min-resolution: 2dppx) and (min-width: 768px),
   screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
-  .container {
+  .footer-container {
     background-image: url("/img/footer/bgr-tablet@2x.webp");
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .section {
+  .footer-section {
     padding-top: 244px;
   }
 
-  .container {
+  .footer-container {
     background-image: url("/img/footer/bgr-desktop@1x.webp");
     background-repeat: no-repeat;
     background-position: bottom right;
@@ -368,7 +368,7 @@
 @media screen and (min-resolution: 192dpi) and (min-width: 1440px),
   screen and (min-resolution: 2dppx) and (min-width: 1440px),
   screen and (min-device-pixel-ratio: 2) and (min-width: 1440px) {
-  .container {
+  .footer-container {
     background-image: url("/img/footer/bgr-desktop@2x.webp");
   }
 }

@@ -4,12 +4,17 @@
   top: 0;
   left: 0;
   background-color: transparent;
-  display: flex;
-  justify-content: space-between;
-  padding-left: 16px;
-  padding-right: 16px;
   padding-top: 32px;
   z-index: 10;
+}
+
+.container {
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .menuButtons {
@@ -19,15 +24,29 @@
 .orderLinkContainer {
   display: none;
   width: 163px;
+  height: 55px;
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    max-width: 375px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  .header {
+  .container {
+    max-width: 768px;
     padding-left: 32px;
     padding-right: 32px;
   }
 
   .orderLinkContainer {
     display: block;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
   }
 }

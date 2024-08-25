@@ -23,7 +23,8 @@
   height: 100vh;
   background-image: url("../../assets/img/mobile-menu/mobile-menu@1x.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 0 0;
+  background-size: 100% 100%;
   backdrop-filter: blur(10px);
   transform: translateX(100vw);
   z-index: 2000;

@@ -8,13 +8,15 @@ import css from "./AppBar.module.css";
 const AppBar = () => {
   return (
     <header className={css.header}>
-      <Logo />
-      <div className={css.menuButtons}>
-        <HeaderMenuBtn />
-        <MobileMenuBtn />
-      </div>
-      <div className={css.orderLinkContainer}>
-        <OrderLink>Order the project</OrderLink>
+      <div className={css.container}>
+        <Logo />
+        <div className={css.menuButtons}>
+          <HeaderMenuBtn />
+          <MobileMenuBtn />
+        </div>
+        <div className={css.orderLinkContainer}>
+          <OrderLink>Order the project</OrderLink>
+        </div>
       </div>
     </header>
   );
