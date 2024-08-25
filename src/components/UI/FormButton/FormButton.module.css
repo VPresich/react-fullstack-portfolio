@@ -32,7 +32,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .button {
+  .btn {
     width: 150px;
     height: 150px;
   }

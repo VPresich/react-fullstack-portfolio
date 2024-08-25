@@ -16,7 +16,7 @@ const HomePage = () => {
           </h1>
           <div className={css.lastLine}>
             <SocialList links={socialLinks} />
-            <EmailLink>lloydjefferson@gmail.com</EmailLink>
+            <EmailLink />
           </div>
         </div>
       </section>

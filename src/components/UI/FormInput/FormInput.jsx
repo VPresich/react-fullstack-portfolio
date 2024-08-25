@@ -8,7 +8,7 @@ const FormInput = ({
   placeholder,
   type = "text",
   className = "",
-  successText = "Success!",
+  successText = "",
 }) => {
   const {
     control,

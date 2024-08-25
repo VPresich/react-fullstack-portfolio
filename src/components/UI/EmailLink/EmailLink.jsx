@@ -1,13 +1,13 @@
 import clsx from "clsx";
 import css from "./EmailLink.module.css";
 
-const EmailLink = ({ children }) => {
+const EmailLink = ({ children = "lloydjefferson@gmail.com" }) => {
   return (
-    <address className={css.address}>
-      <a href="mailto:lloydjefferson@gmail.com" className={clsx(css.link)}>
+    <div className={css.address}>
+      <a href={`mailto:${children}`} className={clsx(css.link)}>
         {children}
       </a>
-    </address>
+    </div>
   );
 };
 

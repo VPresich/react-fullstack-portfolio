@@ -41,6 +41,7 @@ export default function RequestForm({ handleRequest }) {
               />
             )}
           />
+
           <Controller
             name="comment"
             control={methods.control}
@@ -49,7 +50,7 @@ export default function RequestForm({ handleRequest }) {
             )}
           />
         </div>
-        <FormButton type="submit">Log in</FormButton>
+        <FormButton type="submit">Send</FormButton>
       </form>
     </FormProvider>
   );

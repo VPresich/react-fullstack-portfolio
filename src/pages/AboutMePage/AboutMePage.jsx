@@ -1,12 +1,30 @@
 import DocumentTitle from "../../components/DocumentTitle";
+import ContentImage from "../../components/ContentImage/ContentImage";
 import css from "./AboutMePage.module.css";
 
 const AboutMePage = () => {
   return (
     <>
       <DocumentTitle>AboutMe</DocumentTitle>
-      <section className={css.container}>
-        <h2> About me</h2>
+      <section className={css.section}>
+        <div className={css.container}>
+          <h2 className="visually-hidden">About me</h2>
+          <div className={css.infoWrapper}>
+            <div className={css.textWrapper}>
+              <p className={css.text}>
+                I work with people all over the world to create impressive and{" "}
+                <span className={css.textRed}> functional </span>
+                <span className={css.textGrey}> websites </span> that reflect
+                each client&#39;s unique personality.
+              </p>
+            </div>
+            <div className={css.imageWrapper}>
+              <ContentImage />
+            </div>
+          </div>
+          {/* <load src="./about-me-accordion.html" />
+          <load src="./about-me-skills.html" /> */}
+        </div>
       </section>
     </>
   );
