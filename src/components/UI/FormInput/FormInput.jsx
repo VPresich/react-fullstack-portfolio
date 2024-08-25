@@ -8,8 +8,7 @@ const FormInput = ({
   placeholder,
   type = "text",
   className = "",
-  successMessage = "",
-  errorMessage = "",
+  successText = "Success!",
 }) => {
   const {
     control,
@@ -26,8 +25,7 @@ const FormInput = ({
     }
   }, []);
 
-  const errorText = errors[name]?.message || errorMessage;
-  const isSuccess = !errors[name] && successMessage;
+  const errorText = errors[name]?.message || "";
 
   const handleFocus = () => {
     setIsEditing(true);
@@ -47,10 +45,7 @@ const FormInput = ({
   };
 
   const getTruncatedValue = () => {
-    // if (inputRef.current && !isEditing) {
-    //   const originalValue = inputRef.current.dataset.originalValue || "";
-    //   return originalValue.length > 20 ? `${originalValue.slice(0, 20)}...` : originalValue;
-    // }
+    if (inputRef.current && !isEditing) return inputRef.current.value;
     return inputRef.current ? inputRef.current.dataset.originalValue : "";
   };
 
@@ -66,11 +61,9 @@ const FormInput = ({
             placeholder={placeholder}
             className={clsx(
               css.input,
-              {
-                [css.errorInput]: errorText,
-                [css.successInput]: isSuccess,
-              },
-              className
+              errors[name] && css.error,
+              className,
+              successText && !errors[name] && css.success
             )}
             value={getTruncatedValue()}
             onChange={(e) => {
@@ -86,132 +79,12 @@ const FormInput = ({
           />
         )}
       />
-      {errorText && <span className={css.error}>{errorText}</span>}
-      {isSuccess && <span className={css.success}>{successMessage}</span>}
+      {errorText && <span className={css.errorMsg}>{errorText}</span>}
+      {successText && !errorText && (
+        <span className={css.successMsg}>{successText}</span>
+      )}
     </div>
   );
 };
 
 export default FormInput;
-
-// import clsx from "clsx";
-// import { useFormContext } from "react-hook-form";
-// import css from "./FormInput.module.css";
-
-// const FormInput = ({
-//   name,
-//   onChange,
-//   value,
-//   placeholder,
-//   type = "text",
-//   className = "",
-//   successMessage = "",
-//   errorMessage = "",
-// }) => {
-//   const {
-//     formState: { errors },
-//   } = useFormContext();
-
-//   const errorText = errors[name]?.message || errorMessage;
-//   const isSuccess = !errors[name] && successMessage;
-
-//   return (
-//     <div className={css.wrapper}>
-//       <input
-//         type={type}
-//         name={name}
-//         value={value}
-//         onChange={onChange}
-//         className={clsx(
-//           css.input,
-//           {
-//             [css.errorInput]: errors[name] || errorMessage,
-//             [css.successInput]: isSuccess,
-//           },
-//           className
-//         )}
-//         placeholder={placeholder}
-//       />
-//       {errorText && <span className={css.error}>{errorText}</span>}
-//       {isSuccess && <span className={css.success}>{successMessage}</span>}
-//     </div>
-//   );
-// };
-
-// export default FormInput;
-
-// import React, { useState, useEffect, useRef } from 'react';
-// import { useFormContext } from 'react-hook-form';
-// import clsx from 'clsx';
-// import css from './EllipsisInput.module.css';
-
-// const EllipsisInput = ({
-//   name,
-//   placeholder,
-//   initialValue = '',
-//   className = '',
-//   successMessage = '',
-//   errorMessage = '',
-// }) => {
-//   const {
-//     formState: { errors },
-//     register,
-//     setValue,
-//   } = useFormContext();
-
-//   const [isEditing, setIsEditing] = useState(false);
-//   const inputRef = useRef(null);
-
-//   // Initialize input value and store full value in data attribute
-//   useEffect(() => {
-//     if (inputRef.current) {
-//       inputRef.current.value = initialValue;
-//       inputRef.current.dataset.originalValue = initialValue;
-//     }
-//   }, [initialValue]);
-
-//   const handleFocus = () => {
-//     setIsEditing(true);
-//   };
-
-//   const handleBlur = () => {
-//     setIsEditing(false);
-//     // Save the full value in the react-hook-form context
-//     setValue(name, inputRef.current.dataset.originalValue);
-//   };
-
-//   const handleChange = (e) => {
-//     // Update the full value in the data attribute
-//     inputRef.current.dataset.originalValue = e.target.value;
-//   };
-
-//   const errorText = errors[name]?.message || errorMessage;
-//   const isSuccess = !errors[name] && successMessage;
-
-//   return (
-//     <div className={css.wrapper}>
-//       <input
-//         type="text"
-//         name={name}
-//         className={clsx(
-//           css.input,
-//           errorText && css.errorInput,
-//           isSuccess && css.successInput,
-//           className
-//         )}
-//         placeholder={placeholder}
-//         defaultValue={initialValue}
-//         {...register(name)} // Connect to react-hook-form
-//         onFocus={handleFocus}
-//         onBlur={handleBlur}
-//         onChange={handleChange}
-//         ref={inputRef}
-//         title={inputRef.current?.dataset.originalValue || initialValue} // Show full text on hover
-//       />
-//       {errorText && <span className={css.error}>{errorText}</span>}
-//       {!errorText && successMessage && <span className={css.success}>{successMessage}</span>}
-//     </div>
-//   );
-// };
-
-// export default EllipsisInput;
