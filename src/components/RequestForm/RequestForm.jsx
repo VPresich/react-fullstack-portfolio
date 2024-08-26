@@ -1,4 +1,5 @@
 import { useForm, FormProvider, Controller } from "react-hook-form";
+import { useState } from "react";
 import FormButton from "../UI/FormButton/FormButton";
 import { feedbackSchema } from "./feedbackSchema";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -6,6 +7,8 @@ import css from "./RequestForm.module.css";
 import FormInput from "../UI/FormInput/FormInput";
 
 export default function RequestForm({ handleRequest }) {
+  const [successMessage, setSuccessMessage] = useState("");
+
   const methods = useForm({
     resolver: yupResolver(feedbackSchema),
     defaultValues: {
@@ -14,14 +17,15 @@ export default function RequestForm({ handleRequest }) {
     },
   });
 
-  const { handleSubmit, reset } = methods;
+  const { handleSubmit, reset, setError } = methods;
 
   const onSubmit = async (values) => {
     try {
-      await handleRequest(values);
+      const message = await handleRequest(values);
+      setSuccessMessage(message);
       reset();
     } catch (error) {
-      console.log(error.message);
+      setError("email", { type: "manual", message: error.message });
     }
   };
 
@@ -37,10 +41,11 @@ export default function RequestForm({ handleRequest }) {
                 {...field}
                 placeholder="clients@gmail.com"
                 type="text"
+                successText={successMessage}
+                setSuccessText={setSuccessMessage}
               />
             )}
           />
-
           <Controller
             name="comment"
             control={methods.control}
