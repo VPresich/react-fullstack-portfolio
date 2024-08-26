@@ -4,7 +4,11 @@ import { requestProject } from "./operations";
 const requestSlice = createSlice({
   name: "request",
   initialState: {
-    item: { title: "", message: "" },
+    item: {
+      title: "Thank you for your interest in cooperation!",
+      message:
+        "The manager will contact you shortly to discuss further details and opportunities for cooperation. Please stay in touch.",
+    },
     isLoading: false,
     error: null,
   },

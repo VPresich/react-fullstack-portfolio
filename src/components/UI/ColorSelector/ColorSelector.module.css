@@ -1,0 +1,134 @@
+.headerContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  border-radius: 50px;
+  height: 32px;
+  width: 32px;
+  transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn.green {
+  background-color: var(--green);
+}
+
+.btn.blue {
+  background-color: var(--blue);
+}
+
+.btn.red {
+  background-color: var(--red);
+}
+
+.btn.orange {
+  background-color: var(--orange);
+}
+
+.btn.grey {
+  background-color: var(--grey);
+}
+
+.btn.green:hover {
+  background-color: var(--green-hover);
+}
+
+.btn.blue:hover {
+  background-color: var(--blue-hover);
+}
+
+.btn.red:hover {
+  background-color: var(--red-hover);
+}
+
+.btn.orange:hover {
+  background-color: var(--orange-hover);
+}
+
+.btn.grey:hover {
+  background-color: var(--grey-hover);
+}
+
+.btn.open .icon {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(50%);
+  left: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 12px;
+  background-color: transparent;
+}
+
+.label {
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.label.green {
+  background-color: var(--green);
+}
+
+.label.blue {
+  background-color: var(--blue);
+}
+
+.label.red {
+  background-color: var(--red);
+}
+
+.label.orange {
+  background-color: var(--orange);
+}
+
+.label.grey {
+  background-color: var(--grey);
+}
+
+.label.green:hover {
+  background-color: var(--green-hover);
+}
+
+.label.blue:hover {
+  background-color: var(--blue-hover);
+}
+
+.label.red:hover {
+  background-color: var(--red-hover);
+}
+
+.label.orange:hover {
+  background-color: var(--orange-hover);
+}
+
+.label.grey:hover {
+  background-color: var(--grey-hover);
+}
+
+.label input {
+  display: none;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  stroke: var(--main-text);
+  transition: transform 0.3s ease;
+}

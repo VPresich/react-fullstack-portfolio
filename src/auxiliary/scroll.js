@@ -1,16 +1,16 @@
 export const scrollUp = () => {
   if (window.scrollY != 0) {
     setTimeout(function () {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }, 300);
   }
 };
 
-export const scrollToElement = elementId => {
+export const scrollToElement = (elementId) => {
   const element = document.getElementById(elementId);
   if (element) {
     const offsetTop = element.getBoundingClientRect().top + window.scrollY;
-    window.scrollTo({ top: offsetTop - 60, behavior: 'smooth' });
+    window.scrollTo({ top: offsetTop - 60, behavior: "smooth" });
   }
 };
 
@@ -22,7 +22,7 @@ export const scrollDown = () => {
     setTimeout(function () {
       window.scrollBy({
         top: documentHeight - scrollPosition,
-        behavior: 'smooth',
+        behavior: "smooth",
       });
     }, 300);
   }
@@ -36,7 +36,7 @@ export const customScrollToElement = (elementId, duration = 1000) => {
   const target = element.getBoundingClientRect().top + start;
   const startTime = performance.now();
 
-  const animateScroll = currentTime => {
+  const animateScroll = (currentTime) => {
     const timeElapsed = currentTime - startTime;
     const progress = Math.min(timeElapsed / duration, 1);
 
@@ -47,7 +47,6 @@ export const customScrollToElement = (elementId, duration = 1000) => {
     }
   };
 
-  const easeInOutQuad = t => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
-
+  const easeInOutQuad = (t) => (t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t);
   requestAnimationFrame(animateScroll);
 };

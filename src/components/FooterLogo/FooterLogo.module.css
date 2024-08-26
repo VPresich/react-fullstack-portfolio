@@ -35,6 +35,21 @@
 .accent {
   color: var(--button-text);
 }
+.red {
+  color: var(--red);
+}
+.blue {
+  color: var(--blue);
+}
+.green {
+  color: var(--green);
+}
+.orange {
+  color: var(--orange);
+}
+.grey {
+  color: var(--grey);
+}
 
 @media screen and (min-width: 768px) {
   .container {

@@ -21,6 +21,26 @@
   color: var(--button-text);
 }
 
+.btn.red:hover {
+  color: var(--red-hover);
+}
+
+.btn.blue:hover {
+  color: var(--blue-hover);
+}
+
+.btn.green:hover {
+  color: var(--green-hover);
+}
+
+.btn.orange:hover {
+  color: var(--orange-hover);
+}
+
+.btn.grey:hover {
+  color: var(--grey-hover);
+}
+
 .btn::after {
   content: "";
   position: absolute;
@@ -30,9 +50,25 @@
   width: 60%;
   height: 1.5px;
   background-color: var(--main-text);
-  transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn:hover::after {
-  background-color: var(--button-text);
+.btn.red:hover::after {
+  background-color: var(--red-hover);
+}
+
+.btn.blue:hover::after {
+  background-color: var(--blue-hover);
+}
+
+.btn.green:hover::after {
+  background-color: var(--green-hover);
+}
+
+.btn.orange:hover::after {
+  background-color: var(--orange-hover);
+}
+
+.btn.grey:hover::after {
+  background-color: var(--grey-hover);
 }

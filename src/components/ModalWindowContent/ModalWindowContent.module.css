@@ -1,0 +1,20 @@
+.title {
+  font-family: "InterTight", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--main-text);
+  margin-bottom: 16px;
+}
+
+.message {
+  font-family: "InterTight", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(250, 250, 250, 0.6);
+}

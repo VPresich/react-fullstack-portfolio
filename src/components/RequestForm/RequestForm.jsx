@@ -17,13 +17,12 @@ export default function RequestForm({ handleRequest }) {
   const { handleSubmit, reset } = methods;
 
   const onSubmit = async (values) => {
-    console.log(values);
-    // try {
-    //   await handleRequest(values);
-    //   reset();
-    // } catch (error) {
-    //   console.log(error.message);
-    // }
+    try {
+      await handleRequest(values);
+      reset();
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   return (
@@ -55,66 +54,3 @@ export default function RequestForm({ handleRequest }) {
     </FormProvider>
   );
 }
-
-//import { useForm, FormProvider } from "react-hook-form";
-// import FormInput from "../UI/FormInput/FormInput";
-// import "./RequestForm.module.css";
-
-// const RequestForm = () => {
-//   const methods = useForm({
-//     defaultValues: {
-//       email: "",
-//       comment: "",
-//     },
-//   });
-
-//   const {
-//     handleSubmit,
-//     formState: { errors, isSubmitSuccessful },
-//   } = methods;
-
-//   const onSubmit = (data) => {
-//     console.log("Form Data:", data);
-//   };
-
-//   return (
-//     <FormProvider {...methods}>
-//       <form className="footer-form" onSubmit={handleSubmit(onSubmit)}>
-//         <FormInput
-//           name="email"
-//           type="text"
-//           placeholder="clients@gmail.com"
-//           validation={{
-//             required: "Email is required",
-//             pattern: {
-//               value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-//               message: "Invalid email address",
-//             },
-//           }}
-//           errorMessage={errors.email?.message}
-//           successMessage={isSubmitSuccessful && !errors.email ? "Success!" : ""}
-//         />
-
-//         <FormInput
-//           name="comment"
-//           type="text"
-//           placeholder="comments"
-//           validation={{
-//             required: "Comment is required",
-//             minLength: {
-//               value: 5,
-//               message: "Comment must be at least 5 characters",
-//             },
-//           }}
-//           errorMessage={errors.comment?.message}
-//         />
-
-//         <button className="button" type="submit">
-//           Send
-//         </button>
-//       </form>
-//     </FormProvider>
-//   );
-// };
-
-// export default RequestForm;

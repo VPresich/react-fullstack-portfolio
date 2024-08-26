@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import HeaderMenuBtn from "../HeaderMenuBtn/HeaderMenuBtn";
 import MobileMenuBtn from "../MobileMenuBtn/MobileMenuBtn";
 import OrderLink from "../UI/OrderLink/OrderLink";
+import ColorSelector from "../UI/ColorSelector/ColorSelector";
+
 import Logo from "../Logo/Logo";
 
 import { useRef } from "react";
@@ -33,6 +35,7 @@ const AppBar = () => {
         <Logo />
         <div className={css.menuButtons}>
           <HeaderMenuBtn />
+          <ColorSelector />
           <MobileMenuBtn />
         </div>
         <div className={css.orderLinkContainer}>

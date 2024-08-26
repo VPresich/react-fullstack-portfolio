@@ -37,6 +37,46 @@
     color: var(--button-text);
   }
 
+  .btn.red:hover {
+    color: var(--red-hover);
+  }
+
+  .btn.blue:hover {
+    color: var(--blue-hover);
+  }
+
+  .btn.green:hover {
+    color: var(--green-hover);
+  }
+
+  .btn.orange:hover {
+    color: var(--orange-hover);
+  }
+
+  .btn.grey:hover {
+    color: var(--grey-hover);
+  }
+
+  .btn.red:hover::after {
+    background-color: var(--red-hover);
+  }
+
+  .btn.blue:hover::after {
+    background-color: var(--blue-hover);
+  }
+
+  .btn.green:hover::after {
+    background-color: var(--green-hover);
+  }
+
+  .btn.orange:hover::after {
+    background-color: var(--orange-hover);
+  }
+
+  .btn.grey:hover::after {
+    background-color: var(--grey-hover);
+  }
+
   .btn::after {
     content: "";
     position: absolute;
@@ -83,5 +123,24 @@
 
   .link:hover {
     color: var(--button-hover);
+  }
+  .link.red:hover {
+    color: var(--red-hover);
+  }
+
+  .link.blue:hover {
+    color: var(--blue-hover);
+  }
+
+  .link.green:hover {
+    color: var(--green-hover);
+  }
+
+  .link.orange:hover {
+    color: var(--orange-hover);
+  }
+
+  .link.grey:hover {
+    color: var(--grey-hover);
   }
 }

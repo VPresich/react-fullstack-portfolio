@@ -17,3 +17,43 @@
 .link:hover {
   background-color: var(--button-hover);
 }
+
+.link.red {
+  background-color: var(--red);
+}
+
+.link.red:hover {
+  background-color: var(--red-hover);
+}
+
+.link.blue {
+  background-color: var(--blue);
+}
+
+.link.blue:hover {
+  background-color: var(--blue-hover);
+}
+
+.link.green {
+  background-color: var(--green);
+}
+
+.link.green:hover {
+  background-color: var(--green-hover);
+}
+
+.link.orange {
+  background-color: var(--orange);
+}
+
+.link.orange {
+  background-color: var(--orange-hover);
+}
+
+.link.grey {
+  background-color: var(--grey);
+}
+
+.link.grey:hover {
+  background-color: var(--grey-hover);
+}

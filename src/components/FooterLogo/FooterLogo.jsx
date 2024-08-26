@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectTheme } from "../../redux/theme/selectors";
 import imgMobileUrl1x from "../../assets/img/footer/photo-mobile@1x.webp";
 import imgMobileUrl2x from "../../assets/img/footer/photo-mobile@2x.webp";
 import imgDesktopUrl1x from "../../assets/img/footer/photo-desktop@1x.webp";
@@ -6,6 +8,7 @@ import imgDesktopUrl2x from "../../assets/img/footer/photo-desktop@2x.webp";
 import css from "./FooterLogo.module.css";
 
 const FooterLogo = () => {
+  const theme = useSelector(selectTheme);
   return (
     <div className={css.container}>
       <Link className={css.link} to="/home">
@@ -27,7 +30,7 @@ const FooterLogo = () => {
         </picture>
       </Link>
       <h2 className={css.title}>
-        Let&#39;s <span className={css.accent}>work</span>
+        Let&#39;s <span className={css[theme]}>work</span>
       </h2>
       <h2 className={css.title}>together</h2>
     </div>

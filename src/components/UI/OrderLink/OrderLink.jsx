@@ -1,3 +1,6 @@
+import { useSelector } from "react-redux";
+import clsx from "clsx";
+import { selectTheme } from "../../../redux/theme/selectors";
 import css from "./OrderLink.module.css";
 import { customScrollToElement } from "../../../auxiliary/scroll";
 
@@ -10,8 +13,13 @@ const handleClick = (event) => {
 };
 
 const OrderLink = ({ children }) => {
+  const theme = useSelector(selectTheme);
   return (
-    <a className={css.link} href="#id-footer" onClick={handleClick}>
+    <a
+      className={clsx(css.link, css[theme])}
+      href="#id-footer"
+      onClick={handleClick}
+    >
       {children}
     </a>
   );

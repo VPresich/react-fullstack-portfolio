@@ -1,0 +1,111 @@
+.section {
+  height: 812px;
+  background-image: url("../../assets/img/hero/hero-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+  backdrop-filter: blur(100px);
+  padding-top: 281px;
+  padding-bottom: 32px;
+}
+
+.section.green {
+  background-image: url("../../assets/img/hero/hero-bgr-green@1x.webp");
+}
+
+.container {
+  height: 100%;
+  max-width: 375px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.title {
+  width: 100%;
+  font-family: "InterTight", sans-serif;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: -1.5px;
+  margin-left: 0;
+  text-transform: uppercase;
+}
+
+.lastLine {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 375px),
+  screen and (min-resolution: 2dppx) and (min-width: 375px),
+  screen and (min-device-pixel-ratio: 2) and (min-width: 375px) {
+  .section {
+    background-image: url("../../assets/img/hero/hero-mobile@2x.png");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    height: 1024px;
+    padding-top: 300px;
+    background-image: url("../../assets/img/hero/hero-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    backdrop-filter: blur(100px);
+  }
+
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .title {
+    width: 632px;
+    font-size: 90px;
+    letter-spacing: -2.7px;
+  }
+
+  .lastLine {
+    gap: 8px;
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 767px),
+  screen and (min-resolution: 2dppx) and (min-width: 767px),
+  screen and (min-device-pixel-ratio: 2) and (min-width: 767px) {
+  .section {
+    background-image: url("../../assets/img/hero/hero-tablet@2x.png");
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section {
+    height: 900px;
+    background-image: url("../../assets/img/hero/hero-desktop@1x.png");
+  }
+
+  .container {
+    max-width: 1440px;
+  }
+
+  .title {
+    width: 1090px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 1440px),
+  screen and (min-resolution: 2dppx) and (min-width: 1440px),
+  screen and (min-device-pixel-ratio: 2) and (min-width: 1440px) {
+  .section {
+    background-image: url("../../assets/img/hero/hero-desktop@2x.png");
+  }
+}

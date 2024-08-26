@@ -1,10 +1,13 @@
 import { useState } from "react";
 import clsx from "clsx";
+import { useSelector } from "react-redux";
+import { selectTheme } from "../../redux/theme/selectors";
 import { NavLink } from "react-router-dom";
 import css from "./HeaderMenuBtn.module.css";
 
 const HeaderMenuBtn = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const theme = useSelector(selectTheme);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -12,23 +15,43 @@ const HeaderMenuBtn = () => {
 
   return (
     <nav className={css.navigation}>
-      <button className={css.btn} onClick={toggleMenu}>
+      <button className={clsx(css.btn, css[theme])} onClick={toggleMenu}>
         Menu
       </button>
       <ul className={clsx(css.menu, isMenuOpen && css.isopen)}>
-        <NavLink className={css.link} to="/aboutme" onClick={toggleMenu}>
+        <NavLink
+          className={clsx(css.link, css[theme])}
+          to="/aboutme"
+          onClick={toggleMenu}
+        >
           About me
         </NavLink>
-        <NavLink className={css.link} to="/benefits" onClick={toggleMenu}>
+        <NavLink
+          className={clsx(css.link, css[theme])}
+          to="/benefits"
+          onClick={toggleMenu}
+        >
           Benefits
         </NavLink>
-        <NavLink className={css.link} to="/projects" onClick={toggleMenu}>
+        <NavLink
+          className={clsx(css.link, css[theme])}
+          to="/projects"
+          onClick={toggleMenu}
+        >
           Projects
         </NavLink>
-        <NavLink className={css.link} to="/faq" onClick={toggleMenu}>
+        <NavLink
+          className={clsx(css.link, css[theme])}
+          to="/faq"
+          onClick={toggleMenu}
+        >
           FAQ
         </NavLink>
-        <NavLink className={css.link} to="/reviews" onClick={toggleMenu}>
+        <NavLink
+          className={clsx(css.link, css[theme])}
+          to="/reviews"
+          onClick={toggleMenu}
+        >
           Reviews
         </NavLink>
       </ul>
