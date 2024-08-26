@@ -1,5 +1,6 @@
 import DocumentTitle from "../../components/DocumentTitle";
 import ContentImage from "../../components/ContentImage/ContentImage";
+import AboutAccordion from "../../components/AboutAccordion/AboutAccordion";
 import css from "./AboutMePage.module.css";
 
 const AboutMePage = () => {
@@ -22,8 +23,8 @@ const AboutMePage = () => {
               <ContentImage />
             </div>
           </div>
-          {/* <load src="./about-me-accordion.html" />
-          <load src="./about-me-skills.html" /> */}
+          <AboutAccordion />
+          {/* <load src="./about-me-skills.html" />  */}
         </div>
       </section>
     </>
