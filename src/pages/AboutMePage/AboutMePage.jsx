@@ -1,9 +1,12 @@
+import { useSelector } from "react-redux";
+import { selectTheme } from "../../redux/theme/selectors";
 import DocumentTitle from "../../components/DocumentTitle";
 import ContentImage from "../../components/ContentImage/ContentImage";
 import AboutAccordion from "../../components/AboutAccordion/AboutAccordion";
 import css from "./AboutMePage.module.css";
 
 const AboutMePage = () => {
+  const theme = useSelector(selectTheme);
   return (
     <>
       <DocumentTitle>AboutMe</DocumentTitle>
@@ -14,7 +17,7 @@ const AboutMePage = () => {
             <div className={css.textWrapper}>
               <p className={css.text}>
                 I work with people all over the world to create impressive and{" "}
-                <span className={css.textRed}> functional </span>
+                <span className={css[theme]}> functional </span>
                 <span className={css.textGrey}> websites </span> that reflect
                 each client&#39;s unique personality.
               </p>

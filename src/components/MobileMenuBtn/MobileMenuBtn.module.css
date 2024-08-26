@@ -21,7 +21,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url("../../assets/img/mobile-menu/mobile-menu@1x.png");
+  background-image: url("../../assets/img/hero/hero-bgr-red@1x.webp");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 100% 100%;
@@ -29,6 +29,22 @@
   transform: translateX(100vw);
   z-index: 2000;
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobileMenu.red {
+  background-image: url("../../assets/img/hero/hero-bgr-red@1x.webp");
+}
+.mobileMenu.blue {
+  background-image: url("../../assets/img/hero/hero-bgr-blue@1x.webp");
+}
+.mobileMenu.green {
+  background-image: url("../../assets/img/hero/hero-bgr-green@1x.webp");
+}
+.mobileMenu.orange {
+  background-image: url("../../assets/img/hero/hero-bgr-orange@1x.webp");
+}
+.mobileMenu.grey {
+  background-image: url("../../assets/img/hero/hero-bgr-grey@1x.webp");
 }
 
 .mobileMenu.isopen {
@@ -56,7 +72,47 @@
   screen and (min-resolution: 2dppx) and (max-width: 767px),
   screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
   .mobileMenu {
-    background-image: url("../../assets/img/mobile-menu/mobile-menu@2x.png");
+    background-image: url("../../assets/img/hero/hero-bgr-red@2x.webp");
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px),
+  screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
+  .mobileMenu.red {
+    background-image: url("../../assets/img/hero/hero-bgr-red@2x.webp");
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px),
+  screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
+  .mobileMenu.green {
+    background-image: url("../../assets/img/hero/hero-bgr-green@2x.webp");
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px),
+  screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
+  .mobileMenu.blue {
+    background-image: url("../../assets/img/hero/hero-bgr-blue@2x.webp");
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px),
+  screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
+  .mobileMenu.orange {
+    background-image: url("../../assets/img/hero/hero-bgr-orange@2x.webp");
+  }
+}
+
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px),
+  screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
+  .mobileMenu.grey {
+    background-image: url("../../assets/img/hero/hero-bgr-grey@2x.webp");
   }
 }
 
