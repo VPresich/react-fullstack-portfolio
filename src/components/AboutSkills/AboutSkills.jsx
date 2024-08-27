@@ -1,34 +1,57 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import clsx from "clsx";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import { selectTheme } from "../../redux/theme/selectors";
 import SkillItem from "../AboutSkills/SkillItem/SkillItem";
 import skillsData from "./skills-data";
 import css from "./AboutSkills.module.css";
 import pathIcons from "../../assets/img/icons/symbols.svg";
-// import Swiper from 'swiper';
-// import 'swiper/swiper-bundle.min.css';
 
 const AboutSkills = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleNext = () => {
-    setActiveIndex((prevIndex) => (prevIndex + 1) % skillsData.length);
+  const theme = useSelector(selectTheme);
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.realIndex);
   };
 
   return (
     <div className={css.container}>
-      {/* <div className={css.swiperContainer + "swiper"}> */}
-      <div className={css.swiperContainer}>
-        {/* <ul className={css.list + "swiper-wrapper"}> */}
-        <ul className={css.list}>
-          {skillsData.map((skill, index) => (
-            <SkillItem
-              key={index}
-              skill={skill}
-              isActive={index === activeIndex}
-            />
-          ))}
-        </ul>
-      </div>
-      <button className={css.btnNext} onClick={handleNext}>
+      <Swiper
+        onSlideChange={handleSlideChange}
+        slidesPerView={2}
+        modules={[Navigation]}
+        spaceBetween={2}
+        loop={true}
+        effect="slide"
+        speed={700}
+        navigation={{
+          nextEl: `.${css.btnNext}`,
+        }}
+        keyboard={{
+          enabled: true,
+          onlyInViewport: true,
+        }}
+        breakpoints={{
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+          },
+          1439: {
+            slidesPerView: 6,
+            spaceBetween: 0,
+          },
+        }}
+        className={clsx(css.swiperContainer)}
+      >
+        {skillsData.map((skill, index) => (
+          <SwiperSlide key={index}>
+            <SkillItem skill={skill} isActive={index === activeIndex} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <button className={clsx(css.btnNext, css[theme])}>
         <svg className={css.iconNext} aria-label="Arrow icon">
           <use href={`${pathIcons}#icon-arrow-right`}></use>
         </svg>

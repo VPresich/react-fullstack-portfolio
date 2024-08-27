@@ -6,17 +6,9 @@ import css from "./SkillItem.module.css";
 const SkillItem = ({ skill, isActive }) => {
   const theme = useSelector(selectTheme);
   return (
-    <li
-      className={clsx(
-        css.item,
-        css[theme],
-        isActive && css.active,
-        "swiper-slide"
-      )}
-    >
-      <span>{skill}</span>
-    </li>
+    <div className={clsx(css.item, css[theme], isActive && css.active)}>
+      {skill}
+    </div>
   );
 };
-
 export default SkillItem;

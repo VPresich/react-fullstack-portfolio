@@ -1,19 +1,23 @@
 .container {
   width: 100%;
+  height: 130px;
+  padding-left: 0;
   position: relative;
 }
 
 .swiperContainer {
   width: 260px;
+  height: 100%;
   display: flex;
   overflow-x: hidden;
 }
 
-.list {
-  display: flex;
-}
-
-.btnNext {
+.btnNext,
+.red,
+.blue,
+.green,
+.orange,
+.grey {
   position: absolute;
   right: 0;
   top: 50%;
@@ -32,6 +36,26 @@
   transition: background-color 0.05s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.btnNext.red:hover .iconNext {
+  stroke: var(--red);
+}
+
+.btnNext.blue:hover .iconNext {
+  stroke: var(--blue);
+}
+
+.btnNext.green:hover .iconNext {
+  stroke: var(--green);
+}
+
+.btnNext.orange:hover .iconNext {
+  stroke: var(--orange);
+}
+
+.btnNext.grey:hover .iconNext {
+  stroke: var(--grey);
+}
+
 .iconNext {
   width: 28px;
   height: 28px;
@@ -48,11 +72,11 @@
   background-color: var(--cards);
 }
 
-.swiper-button-next::after {
-  display: none;
-}
-
 @media screen and (min-width: 768px) {
+  .container {
+    height: 200px;
+  }
+
   .swiperContainer {
     width: 600px;
   }

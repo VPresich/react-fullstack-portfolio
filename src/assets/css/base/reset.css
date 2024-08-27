@@ -43,3 +43,26 @@ button {
   text-decoration: none;
   font-style: normal;
 }
+
+.swiper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+
+.swiper-slide {
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: none;
+}
