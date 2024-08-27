@@ -3,6 +3,7 @@ import { selectTheme } from "../../redux/theme/selectors";
 import DocumentTitle from "../../components/DocumentTitle";
 import ContentImage from "../../components/ContentImage/ContentImage";
 import AboutAccordion from "../../components/AboutAccordion/AboutAccordion";
+import AboutSkills from "../../components/AboutSkills/AboutSkills";
 import css from "./AboutMePage.module.css";
 
 const AboutMePage = () => {
@@ -27,7 +28,7 @@ const AboutMePage = () => {
             </div>
           </div>
           <AboutAccordion />
-          {/* <load src="./about-me-skills.html" />  */}
+          <AboutSkills />
         </div>
       </section>
     </>

@@ -1,0 +1,80 @@
+.container {
+  width: 100%;
+  position: relative;
+}
+
+.swiperContainer {
+  width: 260px;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.list {
+  display: flex;
+}
+
+.btnNext {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  z-index: 9;
+  transition: background-color 0.05s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.iconNext {
+  width: 28px;
+  height: 28px;
+  stroke: rgba(250, 250, 250, 0.6);
+  fill: transparent;
+  transition: stroke 0.05s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btnNext:hover .iconNext {
+  stroke: var(--main-text);
+}
+
+.btnNext:hover {
+  background-color: var(--cards);
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .swiperContainer {
+    width: 600px;
+  }
+
+  .btnNext {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .btnNext {
+    width: 52px;
+    height: 52px;
+  }
+
+  .swiperContainer {
+    width: 1200px;
+  }
+}

@@ -1,0 +1,76 @@
+.item,
+.red,
+.blue,
+.green,
+.orange,
+.grey {
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: var(--main-text);
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.red:hover,
+.item.active.red:hover {
+  background-color: var(--red-hover);
+}
+
+.blue:hover,
+.item.active.blue:hover {
+  background-color: var(--blue-hover);
+}
+
+.green:hover,
+.item.active.green:hover {
+  background-color: var(--green-hover);
+}
+
+.orange:hover,
+.item.active.orange:hover {
+  background-color: var(--orange-hover);
+}
+
+.grey:hover,
+.item.active.grey:hover {
+  background-color: var(--grey-hover);
+}
+
+.active.red {
+  background-color: var(--red);
+}
+
+.active.blue {
+  background-color: var(--blue);
+}
+
+.active.green {
+  background-color: var(--green);
+}
+
+.active.orange {
+  background-color: var(--orange);
+}
+
+.active.grey {
+  background-color: var(--grey);
+}
+
+@media screen and (min-width: 768px) {
+  .item {
+    width: 200px;
+    height: 200px;
+    font-size: 20px;
+  }
+}
