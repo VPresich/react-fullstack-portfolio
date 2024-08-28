@@ -14,7 +14,7 @@ const ProjectItem = ({
 }) => {
   const theme = useSelector(selectTheme);
   return (
-    <li className={css.item}>
+    <div className={css.item}>
       <div className={css.infoContainer}>
         <ul className={css.langList}>
           {techStack.map((tech, index) => (
@@ -44,7 +44,7 @@ const ProjectItem = ({
           />
         </picture>
       </div>
-    </li>
+    </div>
   );
 };
 
@@ -55,6 +55,3 @@ ProjectItem.propTypes = {
 };
 
 export default ProjectItem;
-
-// className={css.description}>
-//            { Programming Across Borders: Ideas, Technologies, Innovations

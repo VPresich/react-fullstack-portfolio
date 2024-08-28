@@ -42,7 +42,7 @@ const AboutSkills = ({ skillsData }) => {
             spaceBetween: 0,
           },
         }}
-        className={clsx(css.swiperContainer)}
+        className={css.swiperContainer}
       >
         {skillsData.map((skill, index) => (
           <SwiperSlide key={index}>

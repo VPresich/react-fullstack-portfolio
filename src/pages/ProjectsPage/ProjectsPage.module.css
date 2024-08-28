@@ -5,13 +5,11 @@
 }
 
 .container {
-  position: relative;
   max-width: 375px;
   padding-left: 16px;
   padding-right: 16px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 84px;
   margin: 0 auto;
 }
 
@@ -33,7 +31,6 @@
     max-width: 768px;
     padding-left: 32px;
     padding-right: 32px;
-    padding-bottom: 132px;
   }
 }
 

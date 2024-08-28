@@ -10,9 +10,7 @@ const NavigationButtons = ({
   classNameIconNext = "",
 }) => {
   return (
-    <div
-      className={clsx(css.buttons, classNameButtons && { classNameButtons })}
-    >
+    <div className={clsx(css.buttons, classNameButtons)}>
       <NavigationBtn
         iconId="icon-arrow-left"
         ariaLabel="Arrow left icon"

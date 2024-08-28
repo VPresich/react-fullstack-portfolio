@@ -112,6 +112,8 @@
   justify-content: center;
   align-items: center;
   border-radius: 0 0 24px 24px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .imgWrapper.red {
@@ -135,8 +137,14 @@
 }
 
 .img {
-  width: 311px;
-  height: 195px;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 375px) {
+  .img {
+    height: 195px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -162,10 +170,11 @@
 
   .imgWrapper {
     height: 625px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
 
   .img {
-    width: 614px;
     height: 385px;
   }
 }
