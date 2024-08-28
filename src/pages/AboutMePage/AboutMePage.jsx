@@ -4,6 +4,7 @@ import DocumentTitle from "../../components/DocumentTitle";
 import ContentImage from "../../components/ContentImage/ContentImage";
 import AboutAccordion from "../../components/AboutAccordion/AboutAccordion";
 import AboutSkills from "../../components/AboutSkills/AboutSkills";
+import skillsTechData from "../../components/AboutSkills/tech-skills-data";
 import css from "./AboutMePage.module.css";
 
 const AboutMePage = () => {
@@ -28,7 +29,7 @@ const AboutMePage = () => {
             </div>
           </div>
           <AboutAccordion />
-          <AboutSkills />
+          <AboutSkills skillsData={skillsTechData} />
         </div>
       </section>
     </>

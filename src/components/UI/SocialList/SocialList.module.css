@@ -6,8 +6,8 @@
 .item {
   cursor: pointer;
   border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 60px;
-  padding: 10px 12px;
+  border-radius: 50%;
+  padding: 10px;
   width: 37px;
   height: 37px;
   display: flex;
@@ -17,7 +17,6 @@
 }
 
 .item:hover {
-  cursor: pointer;
   border-color: var(--main-text);
 }
 

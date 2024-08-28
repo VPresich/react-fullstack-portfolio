@@ -8,11 +8,14 @@
   height: 130px;
   margin: 0;
   padding: 0;
-  border-radius: 100%;
+  border-radius: 50%;
   border: 1px solid rgba(250, 250, 250, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  padding-left: 4px;
+  padding-right: 4px;
   flex-shrink: 0;
   font-weight: 500;
   font-size: 16px;
@@ -27,46 +30,56 @@
 .red:hover,
 .item.active.red:hover {
   background-color: var(--red-hover);
+  border: none;
 }
 
 .blue:hover,
 .item.active.blue:hover {
   background-color: var(--blue-hover);
+  border: none;
 }
 
 .green:hover,
 .item.active.green:hover {
   background-color: var(--green-hover);
+  border: none;
 }
 
 .orange:hover,
 .item.active.orange:hover {
   background-color: var(--orange-hover);
+  border: none;
 }
 
 .grey:hover,
 .item.active.grey:hover {
   background-color: var(--grey-hover);
+  border: none;
 }
 
 .active.red {
   background-color: var(--red);
+  border: none;
 }
 
 .active.blue {
   background-color: var(--blue);
+  border: none;
 }
 
 .active.green {
   background-color: var(--green);
+  border: none;
 }
 
 .active.orange {
   background-color: var(--orange);
+  border: none;
 }
 
 .active.grey {
   background-color: var(--grey);
+  border: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -74,5 +87,7 @@
     width: 200px;
     height: 200px;
     font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }

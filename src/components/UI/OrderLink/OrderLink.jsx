@@ -12,11 +12,11 @@ const handleClick = (event) => {
   customScrollToElement(targetId);
 };
 
-const OrderLink = ({ children }) => {
+const OrderLink = ({ children, isColored = true }) => {
   const theme = useSelector(selectTheme);
   return (
     <a
-      className={clsx(css.link, css[theme])}
+      className={clsx(css.link, isColored ? css[theme] : css.transparent)}
       href="#id-footer"
       onClick={handleClick}
     >

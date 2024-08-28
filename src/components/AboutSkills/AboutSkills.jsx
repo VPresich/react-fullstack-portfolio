@@ -5,11 +5,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { selectTheme } from "../../redux/theme/selectors";
 import SkillItem from "../AboutSkills/SkillItem/SkillItem";
-import skillsData from "./skills-data";
 import css from "./AboutSkills.module.css";
 import pathIcons from "../../assets/img/icons/symbols.svg";
 
-const AboutSkills = () => {
+const AboutSkills = ({ skillsData }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const theme = useSelector(selectTheme);
   const handleSlideChange = (swiper) => {
