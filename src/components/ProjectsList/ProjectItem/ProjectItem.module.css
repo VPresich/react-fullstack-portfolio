@@ -53,10 +53,55 @@
   transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.link.red {
+  background-color: var(--red);
+}
+
+.link.blue {
+  background-color: var(--blue);
+}
+
+.link.green {
+  background-color: var(--green);
+}
+
+.link.orange {
+  background-color: var(--orange);
+}
+
+.link.grey {
+  background-color: var(--grey);
+}
+
 .link:hover,
 .link:focus {
   background-color: var(--button-hover);
   cursor: pointer;
+}
+
+.link.red:hover,
+.link.red:focus {
+  background-color: var(--red-hover);
+}
+
+.link.blue:hover,
+.link.blue:focus {
+  background-color: var(--blue-hover);
+}
+
+.link.green:hover,
+.link.green:focus {
+  background-color: var(--green-hover);
+}
+
+.link.orange:hover,
+.link.orange:focus {
+  background-color: var(--orange-hover);
+}
+
+.link.grey:hover,
+.link.grey:focus {
+  background-color: var(--grey-hover);
 }
 
 .imgWrapper {
@@ -67,6 +112,26 @@
   justify-content: center;
   align-items: center;
   border-radius: 0 0 24px 24px;
+}
+
+.imgWrapper.red {
+  background-color: var(--red);
+}
+
+.imgWrapper.blue {
+  background-color: var(--blue);
+}
+
+.imgWrapper.green {
+  background-color: var(--green);
+}
+
+.imgWrapper.orange {
+  background-color: var(--orange);
+}
+
+.imgWrapper.grey {
+  background-color: var(--grey);
 }
 
 .img {

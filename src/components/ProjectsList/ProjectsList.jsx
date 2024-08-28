@@ -12,6 +12,8 @@ const ProjectsList = ({ projects }) => {
             url1x={project.url1x}
             url2x={project.url2x}
             projectLink={project.projectLink}
+            techStack={project.techStack}
+            description={project.description}
           />
         ))}
       </ul>

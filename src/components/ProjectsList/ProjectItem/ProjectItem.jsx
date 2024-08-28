@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
+import { useSelector } from "react-redux";
 import clsx from "clsx";
+import { selectTheme } from "../../../redux/theme/selectors";
 import ProjectLangItem from "../ProjectLangItem/ProjectLangItem";
 import css from "./ProjectItem.module.css";
 
@@ -8,8 +10,9 @@ const ProjectItem = ({
   url2x,
   projectLink = "https://github.com/VPresich/nanny-services",
   techStack = [],
-  description,
+  description = "",
 }) => {
+  const theme = useSelector(selectTheme);
   return (
     <li className={css.item}>
       <div className={css.infoContainer}>
@@ -22,7 +25,7 @@ const ProjectItem = ({
           <p className={css.description}>{description}</p>
           <a
             href={projectLink}
-            className={css.link}
+            className={clsx(css.link, css[theme])}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -30,7 +33,7 @@ const ProjectItem = ({
           </a>
         </div>
       </div>
-      <div className={css.imgWrapper}>
+      <div className={clsx(css.imgWrapper, css[theme])}>
         <picture>
           <source srcSet={`${url1x} 1x, ${url2x} 2x`} type="image/webp" />
           <img
