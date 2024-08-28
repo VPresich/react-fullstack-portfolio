@@ -1,18 +1,18 @@
 import DocumentTitle from "../../components/DocumentTitle";
 import NavigationButtons from "../../components/UI/NavigationButtons/NavigationButtons";
+import ProjectsList from "../../components/ProjectsList/ProjectsList";
+import { projectsUrl } from "../../data/projects-data";
 import css from "./ProjectsPage.module.css";
 
 const ProjectsPage = () => {
+  console.log("projectsUrl", projectsUrl);
   return (
     <>
       <DocumentTitle>Projects</DocumentTitle>
       <section className={css.section}>
         <div className={css.container}>
           <h2 className={css.title}>Projects</h2>
-          <div className={css.swiperContainer}>
-            <ul className={css.list}></ul>
-          </div>
-
+          <ProjectsList projects={projectsUrl} />
           <NavigationButtons classNamePrev="btnPrev" classNameNext="btnNext" />
 
           {/* <div className="custom-container-buttons projects-buttons">
