@@ -7,7 +7,9 @@ const SplashScreen = () => {
   return (
     <div className={css.container}>
       <CoversSection projects={projectsUrl} />
-      {/* <Logo /> */}
+      <div className={css.logoContainer}>
+        <Logo />
+      </div>
     </div>
   );
 };

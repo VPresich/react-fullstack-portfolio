@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
+import clsx from "clsx";
 import { useSelector, useDispatch } from "react-redux";
 import {
   selectReviews,
   selectIsLoading,
   selectError,
 } from "../../redux/reviews/selectors";
+import { selectTheme } from "../../redux/theme/selectors";
 import { getReviews } from "../../redux/reviews/operations";
 import DocumentTitle from "../../components/DocumentTitle";
 import ReviewsList from "../../components/ReviewsList/ReviewsList";
@@ -17,6 +19,8 @@ const ReviewsPage = () => {
   const reviews = useSelector(selectReviews);
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
+  const theme = useSelector(selectTheme);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -37,7 +41,7 @@ const ReviewsPage = () => {
             <Loader />
           ) : error || reviews.length === 0 ? (
             <React.Fragment>
-              <p className={css.notfound}>
+              <p className={clsx(css.notfound, css[theme])}>
                 {error ? "Failed to load reviews." : "Reviews not found!"}
               </p>
               <ReviewsList reviews={[]} isNotBtns={true} />

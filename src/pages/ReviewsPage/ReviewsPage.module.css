@@ -36,6 +36,26 @@
   color: var(--button-text);
 }
 
+.notfound.red {
+  color: var(--red);
+}
+
+.notfound.blue {
+  color: var(--blue);
+}
+
+.notfound.green {
+  color: var(--green);
+}
+
+.notfound.orange {
+  color: var(--orange);
+}
+
+.notfound.grey {
+  color: var(--grey);
+}
+
 @media screen and (min-width: 768px) {
   .section {
     padding-bottom: 64px;

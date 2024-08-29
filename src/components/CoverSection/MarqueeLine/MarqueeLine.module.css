@@ -22,12 +22,9 @@
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
-  animation-play-state: paused;
-}
-
-/* .img.play {
+  /* animation-play-state: paused; */
   animation-play-state: running;
-} */
+}
 
 @media screen and (min-width: 768px) {
   .line {
