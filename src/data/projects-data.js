@@ -4,8 +4,8 @@ import urlProject01_2x from "../assets/img/projects/project13@2x.webp";
 import urlProject02_1x from "../assets/img/projects/project11@1x.webp";
 import urlProject02_2x from "../assets/img/projects/project11@2x.webp";
 
-import urlProject03_1x from "../assets/img/projects/project12@1x.webp";
-import urlProject03_2x from "../assets/img/projects/project12@2x.webp";
+import urlProject03_1x from "../assets/img/projects/project14@1x.webp";
+import urlProject03_2x from "../assets/img/projects/project14@2x.webp";
 
 import urlProject04_1x from "../assets/img/projects/project01@1x.webp";
 import urlProject04_2x from "../assets/img/projects/project01@2x.webp";

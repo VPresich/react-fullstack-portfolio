@@ -21,8 +21,7 @@ export default function RequestForm({ handleRequest }) {
 
   const onSubmit = async (values) => {
     try {
-      const message = await handleRequest(values);
-      setSuccessMessage(message);
+      await handleRequest(values);
       reset();
     } catch (error) {
       setError("email", { type: "manual", message: error.message });

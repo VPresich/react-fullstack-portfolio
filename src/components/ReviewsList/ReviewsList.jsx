@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -8,6 +8,7 @@ import Reviewer from "./Reviewer/Reviewer";
 import css from "./ReviewsList.module.css";
 
 const ReviewsList = ({ reviews = [], isNotBtns = false }) => {
+  const [enlargedSlide, setEnlargedSlide] = useState(null);
   const swiperRef = useRef(null);
 
   useEffect(() => {
@@ -33,6 +34,10 @@ const ReviewsList = ({ reviews = [], isNotBtns = false }) => {
       window.removeEventListener("resize", updateSlideHeights);
     };
   }, [reviews]);
+
+  const handleSlideClick = (index) => {
+    setEnlargedSlide(enlargedSlide === index ? null : index);
+  };
 
   return (
     <div className={clsx(css.container, isNotBtns && css.minPadding)}>
@@ -64,8 +69,12 @@ const ReviewsList = ({ reviews = [], isNotBtns = false }) => {
         className={css.swiperContainer}
         ref={swiperRef}
       >
-        {reviews.map((review) => (
-          <SwiperSlide key={review._id}>
+        {reviews.map((review, index) => (
+          <SwiperSlide
+            key={review._id}
+            className={clsx(css.slide, enlargedSlide === index && css.enlarged)}
+            onClick={() => handleSlideClick(index)}
+          >
             <Reviewer {...review} />
           </SwiperSlide>
         ))}

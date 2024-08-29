@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import escapeHTML from "../../../auxiliary/escapeHTML";
 import css from "./Reviewer.module.css";
 
 const Reviewer = ({
@@ -12,8 +11,8 @@ const Reviewer = ({
     <div className={css.item} id={`review-${_id}`}>
       <img className={css.avatar} src={avatar_url} alt={`${author} avatar`} />
       <div className={css.info}>
-        <h3 className={css.fullname}>{escapeHTML(author)}</h3>
-        <p className={css.text}>{escapeHTML(review)}</p>
+        <h3 className={css.fullname}>{author}</h3>
+        <p className={css.text}>{review} </p>
       </div>
     </div>
   );
