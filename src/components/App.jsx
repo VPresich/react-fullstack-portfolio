@@ -1,9 +1,6 @@
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import { lazy } from "react";
-import { Route, Routes } from "react-router-dom";
-import { Navigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-
+import { lazy, useEffect } from "react";
+import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 import MainLayout from "./MainLayout/MainLayout";
 import SplashScreen from "./SplashScreen/SplashScreen";
 
@@ -18,6 +15,11 @@ import css from "./App.module.css";
 
 const App = () => {
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <TransitionGroup>
       <CSSTransition

@@ -33,10 +33,6 @@
     padding-left: 32px;
     padding-right: 32px;
   }
-
-  .title {
-    margin-bottom: 64px;
-  }
 }
 
 @media screen and (min-width: 1440px) {
