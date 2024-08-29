@@ -10,6 +10,8 @@
   padding-left: 16px;
   padding-right: 16px;
   display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 .title {
@@ -25,6 +27,15 @@
   display: flex;
 }
 
+.notfound {
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: var(--button-text);
+}
+
 @media screen and (min-width: 768px) {
   .section {
     padding-bottom: 64px;
@@ -35,18 +46,9 @@
     padding-left: 32px;
     padding-right: 32px;
   }
-
-  .title {
-    margin-bottom: 64px;
-  }
 }
 
 @media screen and (min-width: 1440px) {
-  .section {
-    padding-top: 196px;
-    padding-bottom: 64px;
-  }
-
   .container {
     max-width: 1440px;
   }

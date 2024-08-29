@@ -37,7 +37,7 @@ const AboutSkills = ({ skillsData }) => {
             slidesPerView: 3,
             spaceBetween: 0,
           },
-          1439: {
+          1440: {
             slidesPerView: 6,
             spaceBetween: 0,
           },

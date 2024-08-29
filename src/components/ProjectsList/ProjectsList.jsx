@@ -6,12 +6,9 @@ import ProjectItem from "./ProjectItem/ProjectItem";
 import css from "./ProjectsList.module.css";
 
 const ProjectsList = ({ projects }) => {
-  const handleSlideChange = () => {};
-
   return (
     <div className={css.container}>
       <Swiper
-        onSlideChange={handleSlideChange}
         slidesPerView={1}
         modules={[Navigation]}
         spaceBetween={0}
