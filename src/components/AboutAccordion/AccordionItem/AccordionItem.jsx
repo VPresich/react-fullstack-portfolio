@@ -1,5 +1,5 @@
 import css from "./AccordionItem.module.css";
-import iconsPath from "../../../assets/img/icons/symbols.svg";
+import AccordionButton from "../../UI/AccordionButton/AccordionButton";
 import clsx from "clsx";
 
 const AccordionItem = ({ title, content, isOpen, onClick }) => {
@@ -7,14 +7,7 @@ const AccordionItem = ({ title, content, isOpen, onClick }) => {
     <li className={clsx(css.item, isOpen && css.active)}>
       <h3 className={clsx(css.header)} onClick={onClick}>
         {title}
-        <button className={clsx(css.button, isOpen && css.active)}>
-          <svg
-            className={clsx(css.icon, isOpen && css.active)}
-            aria-label="Arrow icon"
-          >
-            <use href={`${iconsPath}#icon-dropdown`}></use>
-          </svg>
-        </button>
+        <AccordionButton iconId="icon-dropdown" isOpen={isOpen} />
       </h3>
       <div className={clsx(css.panel, isOpen && css.active)}>
         <ul className={css.text}>

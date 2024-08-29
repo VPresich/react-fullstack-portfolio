@@ -1,10 +1,11 @@
+import React from "react";
 import NavigationButtons from "../../components/UI/NavigationButtons/NavigationButtons";
 import DocumentTitle from "../../components/DocumentTitle";
 import css from "./ReviewsPage.module.css";
 
 const ReviewsPage = () => {
   return (
-    <>
+    <React.Fragment>
       <DocumentTitle>Reviews</DocumentTitle>
       <section className={css.section}>
         <div className={css.container}>
@@ -16,7 +17,7 @@ const ReviewsPage = () => {
           <NavigationButtons classNamePrev="btnPrev" classNameNext="btnNext" />
         </div>
       </section>
-    </>
+    </React.Fragment>
   );
 };
 export default ReviewsPage;
