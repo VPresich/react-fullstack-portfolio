@@ -1,4 +1,4 @@
-const faqListData = [
+const faqAccordiontData = [
   {
     question: "What programming languages are most often used in your project?",
     answer:
@@ -32,4 +32,4 @@ const faqListData = [
   },
 ];
 
-export default faqListData;
+export default faqAccordiontData;
