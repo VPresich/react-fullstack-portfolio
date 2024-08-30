@@ -27,16 +27,6 @@
   display: none;
 }
 
-.slide {
-  transition: transform 0.3s ease, z-index 0.3s ease;
-  cursor: pointer;
-}
-
-.slide.enlarged {
-  transform: scale(1.1);
-  z-index: 10;
-}
-
 @media screen and (min-width: 768px) {
   .container {
     padding-bottom: 112px;
