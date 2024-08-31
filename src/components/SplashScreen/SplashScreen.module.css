@@ -16,3 +16,23 @@
   justify-items: center;
   align-items: center;
 }
+
+.logoContainer.red {
+  background-color: var(--red);
+}
+
+.logoContainer.blue {
+  background-color: var(--blue);
+}
+
+.logoContainer.green {
+  background-color: var(--green);
+}
+
+.logoContainer.orange {
+  background-color: var(--orange);
+}
+
+.logoContainer.grey {
+  background-color: var(--grey);
+}
