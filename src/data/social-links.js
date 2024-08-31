@@ -3,7 +3,7 @@ const socialLinks = [
   { href: "https://www.facebook.com/goITclub/", label: "fb" },
   { href: "https://www.youtube.com/GoIT", label: "yt" },
   {
-    href: "https://github.com/aandrea-alex/alex-template-portfolio",
+    href: "https://github.com/VPresich/react-fullstack-portfolio",
     label: "GH",
   },
 ];
